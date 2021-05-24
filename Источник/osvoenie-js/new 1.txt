@@ -1,0 +1,75 @@
+// Кукис! Ом-ном-ном...
+// let cookies = document.querySelector('.cookies-agreement');
+// let cookiesButton = document.querySelector('.button');
+
+// cookiesButton.onclick = function () {
+//   cookies.classList.add('cookies-agreement-closed');
+// };
+
+// let rowViewButton = document.querySelector('.row-view');
+// let tileViewButton = document.querySelector('.tile-view');
+// let newsList = document.querySelector('.news-list');
+
+// rowViewButton.onclick = function () {
+//   rowViewButton.classList.add('view-checked');
+//   tileViewButton.classList.remove('view-checked');
+//   newsList.classList.remove('list-tiles-view');
+// };
+
+// tileViewButton.onclick = function () {
+//   rowViewButton.classList.remove('view-checked');
+//   tileViewButton.classList.add('view-checked');
+//   newsList.classList.add('list-tiles-view');
+// };
+
+if (navigator.cookieEnabled === false){
+	alert("Cookies отключены!");
+}
+
+document.cookie = "name=user;max-age=2629743";
+ 
+document.cookie = "name=user;path=/portfolio";
+
+document.cookie = "name=user;domain=example.com";
+
+document.cookie = "name=user;secure";
+
+document.cookie = "name=user"; 
+document.cookie = "fullname=Ivanov";
+document.cookie = "date=10.01.2021";
+ 
+console.log(document.cookie); // name=user; date=10.01.2021; fullname=Ivanov
+
+var results = document.cookie.match(/name=(.+?)(;|$)/);
+console.log(results[1]); // user
+ 
+var results = document.cookie.match(/fullname=(.+?)(;|$)/);
+console.log(results[1]); // Ivanov
+ 
+var results = document.cookie.match(/date=(.+?)(;|$)/);
+console.log(results[1]); // 10.01.2021
+
+function getCookie(name) {
+	var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+	return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+ 
+console.log(getCookie('name')); // user
+
+var obj = {};
+var cookies = document.cookie.split(/;/);
+for (var i = 0, len = cookies.length; i < len; i++) {
+	var cookie = cookies[i].split(/=/);
+	obj[cookie[0]] = cookie[1];
+}
+
+
+console.dir(obj); // {date: "10.01.2021", fullname: "Ivanov", name: "user"}
+
+document.cookie = "user=;max-age=-1";
+ 
+var cookies = document.cookie.split(/;/);
+for (var i = 0, len = cookies.length; i < len; i++) {
+	var cookie = cookies[i].split(/=/);
+	document.cookie = cookie[0] + "=;max-age=-1";
+}

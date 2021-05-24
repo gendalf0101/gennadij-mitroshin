@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <title>Новостной портал FlashNews!</title>
+</head>
+
+<body class="page light-theme">
+
+  <header class="page-header">
+    <div class="container">
+		<nav id="content" class="blog-navigation">
+		  <button class="theme-button" type="button">Изменить тему</button>
+		  <a href="../../contacts.html">Контакты</a>
+		  <a href="../../portfolio.html">Портфолио</a>
+		  <a href="subscription.html">Подписка</a>
+		  <a href="sign-up.html">Регистрация</a>
+		  <a class="header-logo">
+			<img src="img/main-logo.svg" width="67" height="29" alt="Логотип портала FlashNews!">
+		  </a>
+	</nav>
+    </div>
+  </header>
+
+  <main class="index-main">
+
+    <div class="container">
+	
+			<h1 class="visually-hidden">Новостной портал FlashNews!</h1>
+    
+		<div class="news-view">
+			<button onclick="listView()"><i class="fa fa-bars"></i> Список</button>
+			<button onclick="gridView()"><i class="fa fa-th-large"></i> Плитка</button>
+			<select class="filter" name="news-filter">
+			  <option value="IT">IT</option>
+			  <option value="cats">Котики</option>
+			  <option value="games">Игры</option>
+			  <option value="HR">HR</option>
+			  <option value="all" selected>Все новости</option>
+			</select>
+		</div
+	  
+		<section class="news-list">
+			<h2 class="visually-hidden">Все новости</h2>
+			<div class="row">
+			
+				<article class="news-block" data-category="cats">
+					<div class="column">
+							<img class="images-grid-demo" src="img/news-cat.jpg" alt="Глаза кота"></li>
+						<div class="news-block-text">
+							<h3>Уникальное видео!</h3>
+							<p>Взгляни на мир глазами кота! Твоя жизнь уже никогда не будет прежней…</p>
+							<span class="news-tag">#Котики</span>
+							<time datetime="2020-03-24">24 марта 2020</time>
+						</div>
+					</div>
+				</article>
+				
+				<article class="news-block" data-category="HR">
+					<div class="column">
+							<a href="happiness.html"><img class="images-grid-demo" src="img/walk.jpg" alt="Люди гуляют"></a>
+						<div class="news-block-text">
+							<a href="happiness.html"><h3>Гулять может быть полезно</h3></a>
+							<p>А может и не быть, если гулять не с теми людьми…</p>
+							<span class="news-tag">#HR</span>
+							<time datetime="2020-03-19">19 февраля 2020</time>
+						</div>
+					</div>
+				</article>
+				
+				<article class="news-block" data-category="games">
+					<div class="column">
+							<img class="images-grid-demo" src="img/ar.jpg" alt="Человек в очках виртуальной реальности">
+						<div class="news-block-text">
+							<h3>Дополни свою реальность</h3>
+							<p>Редакция Flashnews! подготовила подарок для своих подписчиков…</p>
+							<span class="news-tag">#Игры</span>
+							<time datetime="2020-02-18">18 февраля 2020</time>
+						</div>
+					</div>
+				</article>
+				
+				<article class="news-block" data-category="IT">
+					<div class="column">
+							<a href="drones.html"><img class="images-grid-demo" src="img/drone.jpg" alt="Маленький дрон"></a>
+						<div class="news-block-text">
+							<a href="drones.html"><h3>Дроновирус</h3></a>
+							<p>Конструкторы лаборатории DogDrones.inc заверили, что их дроны не могут быть переносчиками опасных вирусов…</p>
+							<span class="news-tag">#IT</span>
+							<time datetime="2019-12-22">22 декабря 2019</time>
+						</div>
+					</div>
+				</article>
+				
+				<article class="news-block" data-category="HR">	
+					<div class="column">
+							<img class="images-grid-demo" src="img/new-research.jpg" alt="Человек смотрит на доску с карточками">
+						<div class="news-block-text">
+							<h3>Из мира психологии</h3>
+							<p>Исследования показывают, что если делать больше, то можно сделать больше.</p>
+							<span class="news-tag">#HR</span>
+							<time datetime="2019-10-12">12 октября 2019</time>
+						</div>
+					</div>
+				</article>
+				
+				<article class="news-block" data-category="games">
+					<div class="column">
+							<img class="images-grid-demo" src="img/new-drone.jpg" alt="Квадрокоптер">
+						<div class="news-block-text">
+							<h3>Квадрокоптер — это не роскошь</h3>
+							<p>Управляя квадрокоптером, можно развить ловкость, пространственное мышление и умение лазать по деревьям…</p>
+							<span class="news-tag">#Игры</span>
+							<time datetime="2019-11-21">21 ноября 2019</time>
+						</div>
+					</div>
+				</article>
+				
+				<article class="news-block" data-category="IT">
+					<div class="column">
+							<img class="images-grid-demo" src="img/new-loop.jpg" alt="Бесконечные циклы">
+						<div class="news-block-text">
+							<h3>Бесконечные циклы: пора завязывать с этим</h3>
+							<p>Британские учёные выяснили, что работа ПО напрямую зависит от наличия в нём бесконечных циклов.</p>
+							<span class="news-tag">#IT</span>
+							<time datetime="2019-10-16">16 октября 2019</time>
+						</div>
+					</div>
+				</article>
+				
+				<article class="news-block" data-category="cats">
+					<div class="column">
+							<a href="shok-skandal-sensatsiya.html"><img class="images-grid-demo" src="img/news-robot2.jpg" alt="Робот на курорте"></a>
+						<div class="news-block-text">
+							<a href="shok-skandal-sensatsiya.html"><h3>Шок! Скандал! Сенсация!</h3></a>
+							<p>Оказывается, для того, чтобы начать программировать на JavaScript, необязательно быть котом!</p>
+							<span class="news-tag">#Котики</span>
+							<time datetime="2019-12-22">22 декабря 2019</time>
+						</div>
+					</div>
+				</article>
+				
+				<article class="news-block" data-category="IT">
+					<div class="column">
+							<img class="images-grid-demo" src="img/new-graph.jpg" alt="Новая библиотека">
+						<div class="news-block-text">
+							<h3>Новая библиотека для создания графиков</h3>
+							<p>Теперь вы можете создать дашборд за считанные секунды.</p>
+							<span class="news-tag">#IT</span>
+							<time datetime="2019-10-14">14 октября 2019</time>
+						</div>
+					</div>
+				</article>
+				
+				<article class="news-block" data-category="cats">			
+					<div class="column">
+							<img class="images-grid-demo" src="img/new-cat.jpg" alt="Кот на ноутбуке">
+						<div class="news-block-text">
+							<h3>ШОК! Секретные кадры из кошачьего питомника</h3>
+							<p>Никто не ожидал, что за стенами происходит ТАКОЕ…</p>
+							<span class="news-tag">#Котики</span>
+							<time datetime="2019-10-13">13 октября 2019</time>
+						</div>
+					</div>
+				</article>
+				
+				<article class="news-block" data-category="IT">
+					<div class="column">
+							<a href="algoritm.html"><img class="images-grid-demo" src="img/algoritm.jpg" alt="Зачем нужны алгоритмы"></a>
+						<div class="news-block-text">
+							<a href="algoritm.html"><h3>Зачем нужны алгоритмы</h3></a>
+							<p>Зачем нужны алгоритмы? Многих пугает слово алгоритм, кажется, что это что-то сложное, но на деле это просто законченный набор инструкций.</p>
+							<span class="news-tag">#IT</span>
+							<time datetime="2019-10-13">14 мая 2021</time>
+						</div>
+					</div>
+				</article>
+				
+			</div>
+		</section>
+		
+    </div>
+  </main>
+  
+  <footer class="page-footer">
+    <div class="container">
+		<nav class="footer-nav">
+			<a href="../../contacts.html">Контакты</a>
+			<a href="../../portfolio.html">Портфолио</a>
+			<a href="subscription.html">Подписка</a>
+			<a href="sign-up.html">Регистрация</a>
+		</nav>
+
+        <a class="footer-logo">
+			<p>© FlashNews!</p>
+			<img class="center-pic" src="img/white-logo.svg" alt="Логотип портала FlashNews!">
+		</a>
+    </div>
+  </footer>
+  
+  <button class="up-button" type="button">
+    ↑
+    <span class="visually-hidden">Наверх</span>
+  </button>
+  
+  
+  <script src="script.js"></script>
+  <script src="themes.js"></script>
+  <script src="up-button.js"></script>
+  <script src="filter.js"></script>
+  <script src="spisok-plitka.js"></script>
+  <script src="cookie.js"></script>
+</body>
+
+</html>

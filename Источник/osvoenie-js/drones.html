@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="setting.css">
+    <link rel="stylesheet" href="style.css">
+    <title>FlashNews!</title>
+  </head>
+
+  <body class="page light-theme">
+    <header class="page-header">
+      <div class="container">
+        <span class="header-logo">
+          <img src="img/main-logo.svg" width="67" height="29" alt="Логотип портала FlashNews!">
+        </span>
+        <button class="theme-button" type="button">Изменить тему</button>
+      </div>
+    </header>
+
+    <main class="inner-news">
+      <div class="tooltip">
+        <span class="tooltip-text"></span>
+        <button class="button close-button" type="button"><span>Закрыть</span></button>
+      </div>
+
+      <article class="container">
+        <h1 class="inner-heading">Дроновирус</h1>
+        <div class="news-full">
+          <img src="img/drone.jpg" alt="Маленький дрон">
+          <div class="news-stats">
+            <button class="heart" type="button"><span class="likes-number">50</span></button>
+            <time datetime="2019-12-22">22 декабря 2019</time>
+          </div>
+          <p>Конструкторы лаборатории <button class="tooltip-button" type="button" data-tooltip-text="так себе лаборатория">DogDrones.inc</button> заверили, что их дроны не могут быть переносчиками опасных вирусов, так как это не заложено в их программу. <button class="tooltip-button" type="button" data-tooltip-text="но это не точно, - прим. юриста">Возможно</button>, истинная причина в том, что дроны лаборатории не способны переносить вообще ничего.</p>
+        </div>
+        </article>
+
+        <section class="comment-feed container">
+          <h2>Комментарии</h2>
+          <ol class="comment-list">
+            <li class="user-comment">А что скажете о дронах Keksoflot'а? Не реклама</li>
+            <li class="user-comment">Я сам дрон, поверьте, всё не так однозначно</li>
+            <li class="user-comment">как пропатчить kde2 под freebsd? Очинь нада</li>
+          </ol>
+          <form action="https://echo.htmlacademy.ru/courses" method="post" class="comment-form">
+            <div class="comment-inner">
+              <label class="comment-label" for="comment-textarea">ваш комментарий</label>
+              <textarea class="comment-field comment-area" rows="3" placeholder="Комментарий" required id="comment-textarea"></textarea>
+            </div>
+            <button class="button submit-button" type="submit">Отправить</button>
+          </form>
+        </section>
+    </main>
+
+      <footer class="page-footer">
+        <div class="container">
+          <p>© FlashNews!</p>
+          <span class="footer-logo">
+            <img src="img/white-logo.svg" alt="Логотип портала FlashNews!">
+          </span>
+        </div>
+      </footer>
+
+    <script src="themes.js"></script>
+    <script src="likes.js"></script>
+    <script src="comments.js"></script>
+    <script src="tooltip.js"></script>
+  </body>
+</html>
